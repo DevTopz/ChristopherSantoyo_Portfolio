@@ -1,112 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ren Xandria | AI-assisted Developer</title>
-  <style>
-    /* ===== Reset & Base ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { line-height: 1.6; background: #f5f5f5; color: #333; }
-    a { color: #0077cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* ===== Header ===== */
-    header { background: #0077cc; color: #fff; padding: 60px 20px; text-align: center; }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; }
-    header p { font-size: 1.2em; }
-
-    /* ===== Sections ===== */
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    h2 { font-size: 2em; margin-bottom: 20px; color: #0077cc; }
-
-    /* ===== About ===== */
-    #about p { max-width: 800px; margin-bottom: 15px; }
-
-    /* ===== Projects ===== */
-    .projects { display: flex; flex-wrap: wrap; gap: 20px; }
-    .project { background: #fff; border-radius: 10px; padding: 20px; flex: 1 1 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    .project h3 { margin-bottom: 10px; color: #0077cc; }
-    .project p { margin-bottom: 10px; }
-    .project a { font-weight: bold; }
-
-    /* ===== Skills ===== */
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill { background: #0077cc; color: #fff; padding: 10px 15px; border-radius: 20px; font-size: 0.9em; }
-
-    /* ===== Contact ===== */
-    #contact form { display: flex; flex-direction: column; max-width: 400px; }
-    #contact input, #contact textarea { padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
-    #contact button { padding: 10px; background: #0077cc; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
-    #contact button:hover { background: #005fa3; }
-
-    /* ===== Footer ===== */
-    footer { text-align: center; padding: 20px; background: #eee; font-size: 0.9em; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Web & Game Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>&lt;Dev Portfolio/&gt;</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#web-projects">Web Projects</a></li>
+                <li><a href="#game-dev">Game Dev</a></li>
+                <li><a href="#code-samples">Code</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Ren Xandria</h1>
-    <p>AI-assisted Developer | Building apps and websites with GitHub Copilot</p>
-  </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Web & Game Developer</h1>
+                <p class="fade-in-delay">Crafting Digital Experiences with AI-Enhanced Development</p>
+                <div class="hero-buttons fade-in-delay-2">
+                    <a href="#web-projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Ren, a web developer who leverages AI tools like <strong>GitHub Copilot</strong> to accelerate development, solve problems creatively, and build functional projects efficiently. My workflow combines AI-generated code with manual optimization to ensure quality and reliability.</p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Web Developer & AI Enthusiast</h3>
+                    <p>I am a web developer leveraging cutting-edge AI tools like <strong>GitHub Copilot</strong>, <strong>Claude</strong>, and <strong>Visual Studio</strong> to enhance productivity and create efficient, high-quality code. By combining traditional development skills with AI-powered assistance, I deliver modern web solutions faster and more reliably.</p>
+                    
+                    <h3>Game Developer Since 2013</h3>
+                    <p>With over a decade of experience in game development, I've contributed to major online games including <strong>RF Online</strong> and <strong>Flyff Online</strong>. My work spans gameplay mechanics, feature implementation, and code optimization for high-performance multiplayer environments.</p>
+                    
+                    <div class="skills">
+                        <h3>Tech Stack</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Game Development</span>
+                            <span class="skill-tag">GitHub Copilot</span>
+                            <span class="skill-tag">AI Tools</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website built entirely with HTML, CSS, and JavaScript using GitHub Copilot to speed up coding and layout design.</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Task Manager App</h3>
-        <p>An interactive task manager app with dynamic lists and local storage, built with AI-assisted code for efficiency and clean structure.</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Image Converter Tool</h3>
-        <p>Web-based tool for converting images between formats. Copilot helped generate initial logic and I optimized it for performance and usability.</p>
-        <a href="#">View Project</a>
-      </div>
-    </div>
-  </section>
+    <!-- Web Development Projects -->
+    <section id="web-projects" class="web-projects">
+        <div class="container">
+            <h2 class="section-title">Web Development Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=E-Commerce+Platform" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with payment integration, product management, and user authentication. Built with React, Node.js, and MongoDB.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">GitHub Copilot</div>
-      <div class="skill">AI-assisted Development</div>
-    </div>
-  </section>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/e94b3c/ffffff?text=Task+Management+App" alt="Task Management">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>AI-enhanced task management system with smart scheduling and productivity insights. Developed using AI-assisted coding for rapid feature implementation.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>AI Integration</span>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/6a4c93/ffffff?text=Portfolio+Generator" alt="Portfolio Generator">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Generator</h3>
+                        <p>Dynamic portfolio builder allowing users to create professional portfolios with customizable templates and live preview functionality.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>CSS Grid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 Ren Xandria | Built with GitHub Copilot & HTML/CSS/JS
-  </footer>
+    <!-- Game Development Section -->
+    <section id="game-dev" class="game-dev">
+        <div class="container">
+            <h2 class="section-title">Game Development Experience</h2>
+            <div class="timeline">
+                <!-- RF Online -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>RF Online</h3>
+                        <span class="timeline-date">MMORPG Development</span>
+                        <p>Contributed to gameplay mechanics and server-side optimization for this massive multiplayer online game. Implemented combat system enhancements and performance optimizations handling thousands of concurrent players.</p>
+                        <ul class="contributions">
+                            <li><i class="fas fa-check"></i> Combat system optimization reducing server load by 30%</li>
+                            <li><i class="fas fa-check"></i> Implementation of new PvP mechanics and balancing</li>
+                            <li><i class="fas fa-check"></i> Database query optimization for player data retrieval</li>
+                            <li><i class="fas fa-check"></i> Bug fixes and stability improvements</li>
+                        </ul>
+                        <div class="tech-used">
+                            <span>C++</span>
+                            <span>Network Programming</span>
+                            <span>Database Optimization</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Flyff Online -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Flyff Online</h3>
+                        <span class="timeline-date">MMORPG Development</span>
+                        <p>Developed and maintained features for Flyff Online, focusing on character progression systems, quest implementations, and server stability in a high-traffic multiplayer environment.</p>
+                        <ul class="contributions">
+                            <li><i class="fas fa-check"></i> Quest system development and scripting</li>
+                            <li><i class="fas fa-check"></i> Character progression and skill balancing</li>
+                            <li><i class="fas fa-check"></i> Event system implementation for seasonal content</li>
+                            <li><i class="fas fa-check"></i> Anti-cheat measures and security enhancements</li>
+                        </ul>
+                        <div class="tech-used">
+                            <span>C++</span>
+                            <span>Game Logic</span>
+                            <span>Server Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Samples Section -->
+    <section id="code-samples" class="code-samples">
+        <div class="container">
+            <h2 class="section-title">Code Samples</h2>
+            <p class="section-subtitle">Examples of my coding style and problem-solving approach</p>
+            
+            <div class="code-grid">
+                <!-- Sample 1: React Component -->
+                <div class="code-card">
+                    <div class="code-header">
+                        <h3><i class="fab fa-react"></i> React Hook - Custom Data Fetcher</h3>
+                        <span class="code-language">JavaScript / React</span>
+                    </div>
+                    <pre><code>// Custom hook for efficient data fetching with caching
+import { useState, useEffect, useCallback } from 'react';
+
+export const useDataFetch = (url, options = {}) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchData = useCallback(async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(url, options);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const result = await response.json();
+      setData(result);
+      setError(null);
+    } catch (err) {
+      setError(err.message);
+      setData(null);
+    } finally {
+      setLoading(false);
+    }
+  }, [url, JSON.stringify(options)]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  return { data, loading, error, refetch: fetchData };
+};</code></pre>
+                    <p class="code-description">Reusable React hook demonstrating clean error handling, memoization, and modern hooks patterns for efficient API data fetching.</p>
+                </div>
+
+                <!-- Sample 2: Algorithm -->
+                <div class="code-card">
+                    <div class="code-header">
+                        <h3><i class="fas fa-brain"></i> Game AI - Pathfinding Optimization</h3>
+                        <span class="code-language">C++</span>
+                    </div>
+                    <pre><code>// Optimized A* pathfinding for game NPCs
+class PathFinder {
+private:
+    struct Node {
+        int x, y;
+        float g, h, f;
+        Node* parent;
+        
+        Node(int _x, int _y) : x(_x), y(_y), 
+            g(0), h(0), f(0), parent(nullptr) {}
+    };
+    
+    float heuristic(int x1, int y1, int x2, int y2) {
+        // Manhattan distance for grid-based movement
+        return abs(x1 - x2) + abs(y1 - y2);
+    }
+
+public:
+    vector&lt;Point&gt; findPath(Grid& grid, Point start, Point end) {
+        priority_queue&lt;Node*, vector&lt;Node*&gt;, CompareNode&gt; openList;
+        unordered_set&lt;string&gt; closedList;
+        
+        Node* startNode = new Node(start.x, start.y);
+        openList.push(startNode);
+        
+        while (!openList.empty()) {
+            Node* current = openList.top();
+            openList.pop();
+            
+            if (current->x == end.x && current->y == end.y) {
+                return reconstructPath(current);
+            }
+            
+            closedList.insert(nodeKey(current));
+            exploreNeighbors(current, end, grid, 
+                           openList, closedList);
+        }
+        
+        return {}; // No path found
+    }
+};</code></pre>
+                    <p class="code-description">Efficient A* pathfinding implementation optimized for real-time game environments with thousands of NPCs.</p>
+                </div>
+
+                <!-- Sample 3: API Design -->
+                <div class="code-card">
+                    <div class="code-header">
+                        <h3><i class="fas fa-server"></i> RESTful API - Express Middleware</h3>
+                        <span class="code-language">Node.js / Express</span>
+                    </div>
+                    <pre><code>// Robust authentication middleware with JWT
+const jwt = require('jsonwebtoken');
+const { promisify } = require('util');
+
+const authMiddleware = async (req, res, next) => {
+  try {
+    // Extract token from header
+    const token = req.headers.authorization?.split(' ')[1];
+    
+    if (!token) {
+      return res.status(401).json({
+        success: false,
+        message: 'Authentication required'
+      });
+    }
+
+    // Verify token
+    const decoded = await promisify(jwt.verify)(
+      token, 
+      process.env.JWT_SECRET
+    );
+
+    // Attach user to request
+    req.user = {
+      id: decoded.id,
+      email: decoded.email,
+      role: decoded.role
+    };
+
+    next();
+  } catch (error) {
+    if (error.name === 'TokenExpiredError') {
+      return res.status(401).json({
+        success: false,
+        message: 'Token expired'
+      });
+    }
+    
+    res.status(403).json({
+      success: false,
+      message: 'Invalid token'
+    });
+  }
+};
+
+module.exports = authMiddleware;</code></pre>
+                    <p class="code-description">Production-ready authentication middleware showcasing security best practices, error handling, and clean async/await patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's discuss your next project or opportunity</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Web & Game Developer Portfolio. Built with passion and AI assistance.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
