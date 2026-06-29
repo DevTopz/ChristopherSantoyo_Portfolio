@@ -60,11 +60,13 @@ window.addEventListener('scroll', () => {
     
     // Add background when scrolled
     if (currentScroll > 100) {
-        navbar.style.backgroundColor = 'rgba(22, 33, 62, 0.95)';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.97)';
         navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.backgroundColor = 'var(--darker-bg)';
+        navbar.style.backgroundColor = '#ffffff';
         navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
     }
     
     lastScroll = currentScroll;
@@ -89,7 +91,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all sections, cards, and timeline items
 const animatedElements = document.querySelectorAll(
-    '.bpo-card, .project-card, .timeline-item, .code-card, .contact-item, .about-content'
+    '.project-card, .timeline-item, .code-card, .contact-item, .about-content, .bpo-card, .bpo-competency, .tool-card, .hire-card, .stat-item'
 );
 
 animatedElements.forEach(element => {
@@ -100,10 +102,47 @@ animatedElements.forEach(element => {
 });
 
 // ==========================================
+// ANIMATED COUNTER ON SCROLL
+// ==========================================
+const statNumbers = document.querySelectorAll('.stat-number');
+let countersStarted = false;
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            statNumbers.forEach(num => {
+                const target = parseInt(num.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        num.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        num.textContent = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsBar = document.querySelector('.stats-bar');
+if (statsBar) {
+    statsObserver.observe(statsBar);
+}
+
+// ==========================================
 // CONTACT FORM HANDLING
 // ==========================================
 const contactForm = document.querySelector('.contact-form');
 
+if (contactForm) {
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -127,6 +166,7 @@ contactForm.addEventListener('submit', (e) => {
         showNotification('Please fill in all fields.', 'error');
     }
 });
+}
 
 // ==========================================
 // NOTIFICATION SYSTEM
@@ -305,7 +345,7 @@ scrollTopBtn.style.cssText = `
     font-size: 1.2rem;
     display: none;
     z-index: 1000;
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
     transition: all 0.3s ease;
 `;
 
