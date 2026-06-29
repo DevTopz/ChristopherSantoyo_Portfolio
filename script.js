@@ -89,7 +89,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all sections, cards, and timeline items
 const animatedElements = document.querySelectorAll(
-    '.project-card, .timeline-item, .code-card, .contact-item, .about-content'
+    '.bpo-card, .project-card, .timeline-item, .code-card, .contact-item, .about-content'
 );
 
 animatedElements.forEach(element => {
